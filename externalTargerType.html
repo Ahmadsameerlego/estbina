@@ -25,8 +25,8 @@
 <body>
     <!-- whole page -->
     <main>
-        <!-- start header -->
-        <header>
+         <!-- start header -->
+         <header>
             <!-- header top -->
             <section class="header-top">
                 <div class="container">
@@ -224,75 +224,72 @@
                         </div>
 
                         <!-- single step => inactive -->
-                        <div class="singleStep d-flex  justify-content-center align-items-center flex-column">
-                            <span class="stepCircle "></span>
-                            <span class="stepTitle   fw-bold">  الفئة المستهدفة </span>
+                        <div class="singleStep d-flex active justify-content-center align-items-center flex-column">
+                            <span class="stepCircle active"></span>
+                            <span class="stepTitle color2  fw-bold">  الفئة المستهدفة </span>
                         </div>
 
                         <!-- single step => inactive -->
-                        <div class="singleStep active d-flex justify-content-center align-items-center flex-column">
-                            <span class="stepCircle active "></span>
-                            <span class="stepTitle color2 fw-bold">  القبول والدفع </span>
+                        <div class="singleStep d-flex justify-content-center align-items-center flex-column">
+                            <span class="stepCircle "></span>
+                            <span class="stepTitle  fw-bold">  القبول والدفع </span>
                         </div>
+
                     </div>
                     <!-- end steps -->
-                    <form action="index.html">
-                        <div class="row justify-content-center ">
-                        <div class=" col-md-6 col-9 ">
-                            <div class="d-flex justify-contnet-center flex-column align-items-center mt-3 mb-3 ">
-                            <img src="imgs/success.gif"  class="success">
-                            <h6 class="text-center">تم قبول الأستبيان بنجاح قم بتسديد قيمة الأستبيان للبدأ</h6>
+
+                    <div class="login_form login_form2">
+                        <!-- start form  -->
+                        <form action="accept_and_payment.html" class="mt-4 pb-5">
+                                
+
+                            
+                            <div class="form-group">
+                                <label for="">الفئة المستهدفة</label>
+                                <div class="">
+                                    <a href="addTargetType.html" class="addQueryType d-flex justify-content-between align-items-center">
+                                        <span>اضافة الفئة المستهدفة</span>
+                                        <span class="addQueryTypeIcon"><i class="fa-solid fa-plus"></i></span>
+                                    </a>
+                                </div>
                             </div>
-                        <div class="mt-3 mb-3">
-                                <h6>التفاصيل المالية :</h6>
-                                <hr>
-                                <div class="d-flex justify-content-between align-items-center query">
-                                    <p>قيمة الأستبيان</p>
-                                    <span>150 ريال</span>
+                            <div class="row justify-content-between">
+                                <div class="col-md-9 mb-3 mt-3">
+                                    <div class="target_group_name d-flex justify-content-between align-items-center">
+                                        <a href="editTargetType.html"><i class="fa-solid fa-pen pen"></i></a>
+                                        <p>اسم الفئة المستهدفة</p>
+                                        <button class="btn close"><i class="fa-solid fa-xmark"></i></button>
+                                    </div>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-center query">
-                                    <p>قيمة الأستبيان</p>
-                                    <span>150 ريال</span>
+                                <div class="col-md-9  mb-3 mt-3">
+                                    <div class="target_group_name d-flex justify-content-between align-items-center">
+                                        <a href="editTargetType.html"><i class="fa-solid fa-pen pen"></i></a>
+                                        <p>اسم الفئة المستهدفة</p>
+                                        <button class="btn close"><i class="fa-solid fa-xmark"></i></button>
+                                    </div>
                                 </div>
-                                <hr>
-                                <div class="d-flex justify-content-between align-items-center query">
-                                    <h6> المجموع الكلي</h6>
-                                    <span class="color2">3300 ريال</span>
+                                <div class="col-md-9  mb-3 mt-3">
+                                    <div class="target_group_name d-flex justify-content-between align-items-center">
+                                        <a href="editTargetType.html"><i class="fa-solid fa-pen pen"></i></a>
+                                        <p>اسم الفئة المستهدفة</p>
+                                        <button class="btn close"><i class="fa-solid fa-xmark"></i></button>
+                                    </div>
                                 </div>
-                        </div>   
-                            <h6 class="mb-3" >اختيار طريقة الدفع : </h6>
-                            <input type="radio" id="op_1" name="card_group" class="card_radio" checked="checked">
+                                <div class="col-md-9  mb-3 mt-3">
+                                    <div class="target_group_name d-flex justify-content-between align-items-center">
+                                        <a href="editTargetType.html"><i class="fa-solid fa-pen pen"></i></a>
+                                        <p>اسم الفئة المستهدفة</p>
+                                        <button class="btn close"><i class="fa-solid fa-xmark"></i></button>
+                                    </div>
+                                </div>
+                                
+                            </div>
 
-                            <label for="op_1" class="option d-flex justify-content-between align-items-center mb-3">
-                                <i class="fa-regular fa-credit-card"></i>
-                                <div>
-                                    <p>بطاقة ائتمانية </p>
-                                <p>الدفع بالبطاقة الأتمانيه</p>
-                                </div>
-                                <div class="select">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                            </label>
-                            <input type="radio" id="op_2" name="card_group" class="card_radio">
+                            <!-- Button trigger modal -->
+                            <div class="user_inter user_inter_4 d-flex justify-content-center mt-4">
 
-                            <label for="op_2" class="option d-flex justify-content-between align-items-center mb-3">
-                            <i class="fa-regular fa-credit-card person_card "></i>
-                                <div>
-                                    <p>بطاقة ائتمانية </p>
-                                <p>الدفع بالبطاقة الأتمانيه</p>
-                                </div>
-                                <div class="select">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                            </label>
-                        
-
-                        </div>
-                        <!-- Button trigger modal -->
-                        <div class="user_inter user_inter_4 d-flex justify-content-center pb-5">
-
-                            <button type="button" class="btn button1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                ادفع الان  
+                            <button  class="btn button1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                ارسل الطلب  
                             </button>
                             </div>
                             
@@ -303,20 +300,17 @@
                                     
                                     <div class="modal-body d-flex justify-content-center align-items-center flex-column">
                                     <img src="imgs/success.gif" alt="" class="success">
-                                    <h5 class="text-center">تم الدفع بنجاح واضافة الأستبيان بنجاح</h5>
+                                    <h5 class="text-center">تهانينا تم ارسال الأستبيان الي ادارة التطبيق بنجاح  بانتظار  الموافقة  وتحديد سعر الأستبيان</h5>
                                     </div>
                                     <div class="modal-footer d-flex justify-content-center">
-                                    <a type="button" class="btn button1" href="index.html">الرجوع للرئيسية</a>
+                                    <a type="button" class="btn button1" href="accept_and_payment.html">الرجوع للرئيسية</a>
                                     </div>
                                 </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
-                 
-
+                        </form>
+                    
                     </div>
-                </div>
                 </div>
             </section>
             <!-- end personal form --> 

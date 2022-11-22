@@ -226,6 +226,12 @@
                         <!-- single step => inactive -->
                         <div class="singleStep d-flex justify-content-center align-items-center flex-column">
                             <span class="stepCircle "></span>
+                            <span class="stepTitle  fw-bold">  الفئة المستهدفة </span>
+                        </div>
+
+                        <!-- single step => inactive -->
+                        <div class="singleStep d-flex justify-content-center align-items-center flex-column">
+                            <span class="stepCircle "></span>
                             <span class="stepTitle  fw-bold">  القبول والدفع </span>
                         </div>
 
@@ -234,7 +240,7 @@
 
                     <div class="login_form login_form2">
                         <!-- start form  -->
-                        <form action="addQueryQuestions.html" class="mt-4 pb-5">
+                        <form action="externalTargerType.html" class="mt-4 pb-5">
                                 
                             <div class="mb-3 mt-3 form_group">
                                 <label for="title" class="form-label">عنوان الاستبيان</label>
@@ -265,70 +271,18 @@
                                 <label for="daysTarget" class="form-label">عدد أسئلة الاستبيان</label>
                                 <input type="number" name="" id="daysTarget" value="" placeholder="برجاء ادخال عدد اسئلة الاستبيان" class="password form-control">
                             </div>
-                            <div class="form-group">
-                                <label for="">الفئة المستهدفة</label>
-                                <div class="">
-                                    <a href="addTargetType.html" class="addQueryType d-flex justify-content-between align-items-center">
-                                        <span>اضافة الفئة المستهدفة</span>
-                                        <span class="addQueryTypeIcon"><i class="fa-solid fa-plus"></i></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row justify-content-between">
-                                <div class="col-md-6 mb-3 mt-3">
-                                    <div class="target_group_name d-flex justify-content-between align-items-center">
-                                        <a href="editTargetType.html"><i class="fa-solid fa-pen pen"></i></a>
-                                        <p>اسم الفئة المستهدفة</p>
-                                        <button class="btn close"><i class="fa-solid fa-xmark"></i></button>
-                                    </div>
-                                </div>
-                                <div class="col-md-6  mb-3 mt-3">
-                                    <div class="target_group_name d-flex justify-content-between align-items-center">
-                                        <a href="editTargetType.html"><i class="fa-solid fa-pen pen"></i></a>
-                                        <p>اسم الفئة المستهدفة</p>
-                                        <button class="btn close"><i class="fa-solid fa-xmark"></i></button>
-                                    </div>
-                                </div>
-                                <div class="col-md-6  mb-3 mt-3">
-                                    <div class="target_group_name d-flex justify-content-between align-items-center">
-                                        <a href="editTargetType.html"><i class="fa-solid fa-pen pen"></i></a>
-                                        <p>اسم الفئة المستهدفة</p>
-                                        <button class="btn close"><i class="fa-solid fa-xmark"></i></button>
-                                    </div>
-                                </div>
-                                <div class="col-md-6  mb-3 mt-3">
-                                    <div class="target_group_name d-flex justify-content-between align-items-center">
-                                        <a href="editTargetType.html"><i class="fa-solid fa-pen pen"></i></a>
-                                        <p>اسم الفئة المستهدفة</p>
-                                        <button class="btn close"><i class="fa-solid fa-xmark"></i></button>
-                                    </div>
-                                </div>
-                                
-                            </div>
+
+                           
 
                             <!-- Button trigger modal -->
                             <div class="user_inter user_inter_4 d-flex justify-content-center mt-4">
 
-                            <button type="button" class="btn button1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button class="btn button1" >
                                 ارسل الطلب  
                             </button>
                             </div>
                             
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                    
-                                    <div class="modal-body d-flex justify-content-center align-items-center flex-column">
-                                    <img src="imgs/success.gif" alt="" class="success">
-                                    <p class="text-center">تهانينا تم ارسال الأستبيان الي ادارة التطبيق بنجاح  بانتظار  الموافقة  وتحديد سعر الأستبيان</p>
-                                    </div>
-                                    <div class="modal-footer d-flex justify-content-center">
-                                    <a type="button" class="btn button1" href="accept_and_payment.html">الرجوع للرئيسية</a>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
+                            
                         </form>
                     
                     </div>
