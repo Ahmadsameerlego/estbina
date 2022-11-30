@@ -571,35 +571,42 @@
 
     <script>
 
-        function add_option(){
+        function add_option(clonedSec){
             // add a choose option  => same script add one chhose option and rows , columns
         
-            let addOptions = document.querySelectorAll('.addOption');
-            console.log(addOptions)
+            let addOptions = clonedSec.querySelectorAll('.addOption');
 
             addOptions.forEach( (element)=>{
                 element.addEventListener('click', ()=>{
 
                     let clonedDiv = element.parentElement.parentElement.children;
 
+                    console.log(( clonedDiv ))
                     for( i = 0; i < clonedDiv.length ; i++ ){
                         if( clonedDiv[i].className == "boxes" ){
                         
                             let clone = clonedDiv[i].firstElementChild.cloneNode(true);
 
+
+                            let input = clone.querySelector('input');
+                            input.value = ''
                             clonedDiv[i].appendChild(clone)   
+
+                            console.log( input )
                         }
                     }
 
                 })
             } )
         }
-        add_option()
 
-        function selectIndex(){
+            // add a choose option  => same script add one chhose option and rows , columns
+
+            add_option(document)
+        function selectIndex(selctd){
             // hide and show parts depend on select
 
-            let assets = document.querySelectorAll('.asset-selection');
+            let assets = selctd.querySelectorAll('.asset-selection');
             assets.forEach( (e)=>{
                     e.addEventListener('change', ()=>{
 
@@ -617,7 +624,7 @@
 
                             el.classList.add('active');
 
-                            let inp = document.querySelectorAll(`.${el.children[0].className} input`)
+                            let inp = el.querySelectorAll(`.${el.children[0].className} input`)
                             inp.forEach(ele=> ele.removeAttribute('disabled'))
 
                         }else{
@@ -628,7 +635,7 @@
             } )
         }
 
-        selectIndex()
+        selectIndex(document)
 
         function removeSection(){
             // remove the Question
@@ -644,22 +651,28 @@
                 })
             } )
         }
-        // removeSection()
+
         // add query question
         function addQueryQuestion(){
 
             let clonedSec = document.querySelector('#singleQueryQuestion');
 
-            
             let clonedArea = document.querySelector('#ClonedQuestion');
 
             let cloned = clonedSec.cloneNode(true) ;
+
+            let inputs = cloned.querySelectorAll('input');
+            inputs.forEach((remIn)=>{
+                remIn.value = '';
+            })
 
             let removedParts = cloned.querySelectorAll('.asset') ;
 
             removedParts.forEach((rem)=>{
                 rem.classList.remove('active') ;
             })
+
+            // let removeds = document.querySelectorAll()
 
             for( let i = 0 ; i < 8 ; i++ ){
                 let ClonedOption = cloned.querySelectorAll('.asset-selection option') ;
@@ -673,16 +686,53 @@
 
             }
 
-            
-            clonedArea.appendChild(cloned);
+            let removedImages = cloned.querySelectorAll('.uploaded-block');
+            removedImages.forEach((remvImg)=>{
 
-            selectIndex() ;
-            add_option() ;
-            removeSection()
+                remvImg.remove()
+                
+            })
+            
+            selectIndex(cloned) ;
+            add_option(cloned) ;
+            removeSection() ;
+            uploadImage(cloned)
+
+            clonedArea.appendChild(cloned);
+ 
         }
        
         
 
+    </script>
+
+
+
+
+    <script>
+
+        function uploadImage(clonedsec){
+            // Upload Image
+            $(clonedsec).ready(function() {
+
+                // ADD IMAGE
+                $('.image-uploader').change(function (event){
+                    $(this).parents('.images-upload-block .upload-img').append('<div class="uploaded-block"><img src="'+ URL.createObjectURL(event.target.files[0]) +'"><button class="close" type="button">&times;</button></div>');
+                });
+
+                // REMOVE IMAGE
+                $('.images-upload-block').on('click', '.close',function (e){
+                    $(this).parents('.uploaded-block').remove();
+                    e.preventDefault()
+                });
+
+            });
+        }
+
+        let idIdent = document.querySelector('.singleQueryQuestion');
+            uploadImage(idIdent)
+        
+        
     </script>
     
 </body>
